@@ -59,6 +59,17 @@ run-server:
 	@echo "Stream endpoint: http://localhost:8000/stream?query=test"
 	venv/bin/python3 examples/stream_server.py
 
+run-orchestrator-server:
+	@echo "🚀 Starting A2A Orchestrator Stream Server..."
+	@echo ""
+	@echo "Server: http://localhost:8000"
+	@echo "A2A Stream Endpoint: http://localhost:8000/a2a/stream"
+	@echo ""
+	@echo "Test with:"
+	@echo "  curl -N http://localhost:8000/a2a/stream?query=test"
+	@echo ""
+	venv/bin/python3 examples/orchestrator_stream_server.py
+
 run-client:
 	@echo "Starting streaming client..."
 	venv/bin/python3 examples/stream_client.py
